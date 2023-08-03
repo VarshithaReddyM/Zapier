@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>
+  Zapier-StartUp
+</title>
+<link rel="icon" href="C:\xampp\htdocs\logoo.png" type="image">
+<style>
+  .sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding-top: 20px;
+    color: #fff;
+}
+.sidebar h2 {
+    text-align: center;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar li {
+    padding: 8px 16px;
+}
+.sidebar li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+.sidebar li a:hover {
+    background-color: #333;
+}
+  ul {
+  list-style-type: none;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #664229;
+}
+li {
+  float: right;
+  padding:10px;
+  font-size: 15px;
+  font-family: Verdana;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration:none;
+}
+li a:hover {
+  background-color: #111;
+}
+main {
+    padding: 2rem;
+    text-align:justify;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+#searchInput {
+    padding: 0.5rem;
+    font-size: 16px;
+    width: 300px;
+}
+#searchButton {
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 250px;
+    padding-left: 250px;
+}
+.slide {
+    display: none;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content p {
+  margin: 0;
+}
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+.footer-links li {
+  display: inline;
+}
+.footer-links li:not(:last-child)::after {
+  content: " | ";
+  color: cyan;
+  margin: 0 5px;
+}
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+<body style="background-color:#E5D3B3">
+  <header>
+    <h1 style="text-align:center;font-size:50px">Zapier</h1>
+  </header>
+  <nav>
+  <ul>
+    <li><a class="active" href="signup.php">Sign Up</a></li>
+    <li><a href="#job">My Jobs</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#home">Home</a></li>
+  </ul>
+  </nav>
+  <div class="sidebar">
+    <h2>JOBS</h2>
+    <ul>
+        <li><a href="#">Software Engineers</a></li>
+        <li><a href="#">Product Managers</a></li>
+        <li><a href="#">Data Scientists</a></li>
+        <li><a href="#">Web Developer</a></li>
+        <li><a href="#">Backend Developer</a></li>
+        <li><a href="#">Design Developer</a></li>
+        <li><a href="#">Others</a></li>
+    </ul>
+</div>
+  <main>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search jobs...">
+        <button id="searchButton">Search</button>
+    </div>
+    <div id="jobList">
+    </div>
+</main>
+  <div class="slideshow-container">
+    <div class="slide">
+        <img src="copy4.jpg" alt="Slide 1">
+    </div>
+    <div class="slide">
+        <img src="copy1.jpg" alt="Slide 2">
+    </div>
+    <div class="slide">
+        <img src="copy3.jpg" alt="Slide 3">
+    </div>
+    <div class="slide">
+      <img src="copy2.jpg" alt="Slide 4">
+    </div>
+    <div class="slide">
+      <img src="copy5.jpg" alt="Slide 4">
+    </div>
+</div>
+<script>
+  let slideIndex = 0;
+showSlides();
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000);
+}
+</script>
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2023 Your Startup Company. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>
